@@ -29,19 +29,7 @@ const projects = defineCollection({
   }),
 });
 
-// Docs collection schema
-const docs = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    order: z.number().optional(),
-    category: z.string().optional(),
-  }),
-});
-
 export const collections = {
   blog,
   projects,
-  docs,
 };

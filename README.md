@@ -1,4 +1,4 @@
-# Robotics Club Website
+# Voorheesville Robotics Club Website
 
 A high-performance, student-maintainable website for our high school robotics club. Built with Astro, TypeScript, and Tailwind CSS.
 
@@ -198,4 +198,4 @@ MIT License - feel free to use this for your own robotics club!
 
 ---
 
-Built with ❤️ by the Robotics Club | Powered by [Astro](https://astro.build)
+Built with ❤️ by the Voorheesville Robotics Club | Powered by [Astro](https://astro.build)

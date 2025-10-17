@@ -8,7 +8,7 @@ export async function GET(context: APIContext) {
   const posts = sortBlogPosts(filterDrafts(allPosts));
 
   return rss({
-    title: 'Robotics Club Blog',
+    title: 'Voorheesville Robotics Club Blog',
     description: 'Articles, tutorials, and updates from our high school robotics club',
     site: context.site?.toString() || 'https://example.com',
     items: posts.map((post) => ({

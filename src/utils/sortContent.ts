@@ -19,23 +19,6 @@ export function sortProjects(projects: CollectionEntry<'projects'>[]) {
 }
 
 /**
- * Sorts documentation by order field, then by title
- */
-export function sortDocs(docs: CollectionEntry<'docs'>[]) {
-  return docs.sort((a, b) => {
-    // If both have order numbers, sort by order
-    if (a.data.order !== undefined && b.data.order !== undefined) {
-      return a.data.order - b.data.order;
-    }
-    // If only one has order, it comes first
-    if (a.data.order !== undefined) return -1;
-    if (b.data.order !== undefined) return 1;
-    // Otherwise sort alphabetically by title
-    return a.data.title.localeCompare(b.data.title);
-  });
-}
-
-/**
  * Filters out draft posts in production, shows all in development
  */
 export function filterDrafts<T extends CollectionEntry<'blog'>>(posts: T[]): T[] {

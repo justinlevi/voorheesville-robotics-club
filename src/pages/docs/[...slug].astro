@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { sortDocs } from '@/utils/sortContent';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map((doc) => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }));
+}
+
+interface Props {
+  doc: CollectionEntry<'docs'>;
+}
+
+const { doc } = Astro.props;
+const { Content } = await doc.render();
+
+// Get all docs for sidebar
+const allDocs = await getCollection('docs');
+const sortedDocs = sortDocs(allDocs);
+---
+
+<BaseLayout
+  title={doc.data.title}
+  description={doc.data.description}
+>
+  <div class="py-12">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar -->
+        <aside class="lg:w-64 flex-shrink-0">
+          <div class="lg:sticky lg:top-20">
+            <h2 class="text-sm font-semibold text-gray-900 mb-4">Documentation</h2>
+            <nav class="space-y-1">
+              {sortedDocs.map((d) => (
+                <a
+                  href={`/docs/${d.id}`}
+                  class:list={[
+                    'block px-3 py-2 text-sm rounded-md transition-colors',
+                    d.id === doc.id
+                      ? 'bg-blue-50 text-blue-700 font-medium'
+                      : 'text-gray-700 hover:bg-gray-100',
+                  ]}
+                >
+                  {d.data.title}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Content -->
+        <article class="flex-1 min-w-0">
+          <header class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+              {doc.data.title}
+            </h1>
+            {doc.data.description && (
+              <p class="text-xl text-gray-600">
+                {doc.data.description}
+              </p>
+            )}
+          </header>
+
+          <div class="prose prose-lg prose-gray max-w-none prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-code:text-pink-600 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:bg-gray-900 prose-pre:text-gray-100">
+            <Content />
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

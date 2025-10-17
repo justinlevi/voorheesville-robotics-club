@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogCard from '@/components/BlogCard.astro';
+import { sortBlogPosts, filterDrafts } from '@/utils/sortContent';
+
+const allPosts = await getCollection('blog');
+const posts = sortBlogPosts(filterDrafts(allPosts));
+---
+
+<BaseLayout
+  title="Blog"
+  description="Read our latest articles about robotics, programming tutorials, competition updates, and club news."
+>
+  <div class="py-12">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <!-- Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Blog
+        </h1>
+        <p class="text-xl text-gray-600">
+          Articles, tutorials, and updates from our robotics club
+        </p>
+      </header>
+
+      <!-- Posts Grid -->
+      {posts.length > 0 ? (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-600">No blog posts yet. Check back soon!</p>
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>

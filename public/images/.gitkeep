@@ -1,0 +1,4 @@
+# This file ensures the images directory is tracked by git
+# Add your blog and project images to:
+# - /public/images/blog/
+# - /public/images/projects/

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -64,7 +65,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
         <h2>Get Involved</h2>
         <p>
           Interested in joining? No experience necessary! We welcome students of all skill levels.
-          Come to any Wednesday meeting to learn more or <a href="/contact">contact us</a> for more information.
+          Come to any Wednesday meeting to learn more or <a href={`${base}/contact`}>contact us</a> for more information.
         </p>
 
         <p>

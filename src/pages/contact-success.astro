@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Message Sent Successfully"
+  description="Thank you for contacting Voorheesville Robotics Club"
+>
+  <div class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="max-w-2xl w-full text-center">
+      <!-- Success Icon -->
+      <div class="mb-8">
+        <div class="mx-auto w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
+          <svg class="w-12 h-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Success Message -->
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Message Sent Successfully!
+      </h1>
+
+      <p class="text-xl text-gray-600 mb-8">
+        Thank you for reaching out to Voorheesville Robotics Club.
+      </p>
+
+      <!-- What's Next -->
+      <div class="bg-blue-50 rounded-lg p-8 mb-8 text-left">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">What Happens Next?</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <p class="text-gray-700">
+              <strong>We've received your message</strong> and will review it shortly.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p class="text-gray-700">
+              <strong>Expect a response within 24-48 hours</strong> during the school week.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <p class="text-gray-700">
+              <strong>Interested in joining?</strong> Feel free to visit us during our meeting times!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Meeting Times Reminder -->
+      <div class="bg-gray-50 rounded-lg p-6 mb-8">
+        <h3 class="font-bold text-gray-900 mb-3">Meeting Times</h3>
+        <div class="text-gray-700 space-y-2">
+          <p><strong>Mondays:</strong> 2:30-3:30 PM (Grades 9-12)</p>
+          <p><strong>Thursdays:</strong> 2:30-3:30 PM (Grades 6-12)</p>
+          <p class="text-sm text-gray-600 mt-3">
+            📍 Clayton A. Bouton High School<br>
+            432 New Salem Rd, Voorheesville, NY 12186
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={`${base}/`}
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          Back to Home
+        </a>
+        <a
+          href={`${base}/blog`}
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          Read Our Blog
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

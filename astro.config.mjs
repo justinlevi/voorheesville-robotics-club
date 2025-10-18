@@ -7,6 +7,12 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://justinlevi.com',
   base: '/voorheesville-robotics-club',
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true
+    }
+  },
   vite: {
     plugins: [tailwindcss()]
   }

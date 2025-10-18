@@ -7,36 +7,41 @@ interface Props {
 }
 
 const { project } = Astro.props;
+const slug = project.id.replace(/\.md$/, '');
 ---
 
 <article class="group flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
   <!-- Image -->
-  <a href={`/projects/${project.id}`} class="block overflow-hidden relative">
-    <img
-      src={project.data.image}
-      alt={project.data.title}
-      class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-    />
-    <!-- Status Badge -->
-    <div class="absolute top-4 right-4">
-      <span
-        class:list={[
-          'inline-block px-3 py-1 text-xs font-medium rounded-full shadow-sm',
-          project.data.status === 'completed'
-            ? 'bg-green-100 text-green-800'
-            : 'bg-yellow-100 text-yellow-800',
-        ]}
-      >
-        {project.data.status === 'completed' ? 'Completed' : 'In Progress'}
-      </span>
-    </div>
-  </a>
+  {project.data.image && (
+    <a href={`/projects/${slug}`} class="block overflow-hidden relative">
+      <img
+        src={project.data.image}
+        alt={project.data.title}
+        class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+        onerror="this.parentElement.style.display='none'"
+      />
+      <!-- Status Badge -->
+      <div class="absolute top-4 right-4">
+        <span
+          class:list={[
+            'inline-block px-3 py-1 text-xs font-medium rounded-full shadow-sm',
+            project.data.status === 'completed'
+              ? 'bg-green-100 text-green-800'
+              : 'bg-yellow-100 text-yellow-800',
+          ]}
+        >
+          {project.data.status === 'completed' ? 'Completed' : 'In Progress'}
+        </span>
+      </div>
+    </a>
+  )}
 
   <!-- Content -->
   <div class="flex-1 p-6 flex flex-col">
     <!-- Title -->
     <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-      <a href={`/projects/${project.id}`} class="hover:underline">
+      <a href={`/projects/${slug}`} class="hover:underline">
         {project.data.title}
       </a>
     </h3>

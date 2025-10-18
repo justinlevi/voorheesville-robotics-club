@@ -24,7 +24,7 @@ const projects = defineCollection({
     status: z.enum(['completed', 'in-progress']),
     tech: z.array(z.string()),
     team: z.array(z.string()),
-    image: z.string(),
+    image: z.string().optional(),
     featured: z.boolean().default(false),
   }),
 });

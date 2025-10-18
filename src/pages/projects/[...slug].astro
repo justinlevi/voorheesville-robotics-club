@@ -6,7 +6,7 @@ import ProjectLayout from '@/layouts/ProjectLayout.astro';
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
   return projects.map((project) => ({
-    params: { slug: project.id },
+    params: { slug: project.id.replace(/\.md$/, '') },
     props: { project },
   }));
 }

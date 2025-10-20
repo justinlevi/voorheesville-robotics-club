@@ -8,4 +8,4 @@ tags: ["hype", "blog post", "test"]
 
 **PLEASE WORK**
 
-![Test Image (My Projects Actually Work]([image.jpg](https://randompicturegenerator.com/img/picture-generator/52e3d54a4855ae14f1dc8460962e33791c3ad6e04e507749742c78d6944cc3_640.jpg))
+![Test Image (My Projects Actually Work](https://randompicturegenerator.com/img/picture-generator/52e3d54a4855ae14f1dc8460962e33791c3ad6e04e507749742c78d6944cc3_640.jpg)

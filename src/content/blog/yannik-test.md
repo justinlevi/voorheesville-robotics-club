@@ -4,7 +4,7 @@ description: "a short list of reasons why Muv-Luv is the greatest piece of media
 date: 2025-10-20
 author: "Yannik Fernando"
 tags: ["Visual Novel", "List" ]
-image: "/images/blog/welcome.jp"
+image: "https://muvluv.com/en/muv-luv/img/top-logo.png"
 ---
 
 # Its just so peak

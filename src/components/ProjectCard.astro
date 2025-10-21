@@ -8,13 +8,12 @@ interface Props {
 
 const { project } = Astro.props;
 const slug = project.id.replace(/\.md$/, '');
-const base = import.meta.env.BASE_URL;
 ---
 
 <article class="group flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
   <!-- Image -->
   {project.data.image && (
-    <a href={`${base}/projects/${slug}`} class="block overflow-hidden relative">
+    <a href={`/projects/${slug}`} class="block overflow-hidden relative">
       <img
         src={project.data.image}
         alt={project.data.title}
@@ -42,7 +41,7 @@ const base = import.meta.env.BASE_URL;
   <div class="flex-1 p-6 flex flex-col">
     <!-- Title -->
     <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-      <a href={`${base}/projects/${slug}`} class="hover:underline">
+      <a href={`/projects/${slug}`} class="hover:underline">
         {project.data.title}
       </a>
     </h3>

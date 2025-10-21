@@ -5,8 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://justinlevi.com',
-  base: '/voorheesville-robotics-club',
+  site: 'https://voorheesvillerobotics.com',
   markdown: {
     shikiConfig: {
       theme: 'github-dark',

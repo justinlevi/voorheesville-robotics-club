@@ -1,18 +1,17 @@
 ---
 const currentYear = new Date().getFullYear();
-const base = import.meta.env.BASE_URL;
 
 const footerLinks = {
   navigation: [
-    { href: `${base}/`, label: 'Home' },
-    { href: `${base}/blog`, label: 'Blog' },
-    { href: `${base}/projects`, label: 'Projects' },
-    { href: `${base}/about`, label: 'About' },
-    { href: `${base}/contact`, label: 'Contact' },
+    { href: '/', label: 'Home' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
   ],
   resources: [
     { href: 'https://github.com', label: 'GitHub' },
-    { href: `${base}/rss.xml`, label: 'RSS Feed' },
+    { href: '/rss.xml', label: 'RSS Feed' },
   ],
 };
 ---

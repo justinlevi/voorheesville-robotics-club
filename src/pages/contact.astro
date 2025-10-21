@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -121,7 +120,7 @@ const base = import.meta.env.BASE_URL;
           <form action="https://formsubmit.co/jwinter@voorheesville.org" method="POST" class="space-y-4">
             <!-- FormSubmit Configuration -->
             <input type="hidden" name="_subject" value="Voorheesville Robotics Club - New Contact">
-            <input type="hidden" name="_next" value={`https://justinlevi.com${base}/contact-success`}>
+            <input type="hidden" name="_next" value="https://voorheesvillerobotics.com/contact-success">
             <input type="hidden" name="_captcha" value="true">
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 

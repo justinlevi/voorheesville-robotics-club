@@ -3,8 +3,7 @@ title: "Voorheesville Robotics Club Learns Web Development "
 description: "Members of the Voorheesville Robotics Club using GitHub and Astro learn web development and editing in the creation of this Website."
 date: 2025-10-23
 author: "T. Ellwood"
-tags: ["GitHub", "Website Dev.", "Astro", "Coding-Strong"]
-image: 
+tags: ["GitHub", "Website Dev.", "Astro", "Coding-Strong"] 
 ---
 
 # New Beginnings For VRC:

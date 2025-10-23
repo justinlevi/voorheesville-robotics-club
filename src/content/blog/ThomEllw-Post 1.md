@@ -4,7 +4,7 @@ description: "Members of the Voorheesville Robotics Club using GitHub and Astro 
 date: 2025-10-23
 author: "T. Ellwood"
 tags: ["GitHub", "Website Dev.", "Astro"] 
-image: "https://image.maxpreps.io/school-mascot/8/1/8/8189bc71-3da4-4932-afdd-788cd761d6ce.gif?version=636584101800000000&width=1024&height=1024"
+image: "https://image.maxpreps.io/school-mascot/8/1/8/8189bc71-3da4-4932-afdd-788cd761d6ce.gif?version=636584101800000000&width=500&height=500"
 ---
 
 # New Beginnings For VRC:

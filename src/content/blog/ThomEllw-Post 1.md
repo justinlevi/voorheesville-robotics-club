@@ -17,5 +17,4 @@ Club members began learning about Markdown Syntax and it's application for websi
 - [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 - [Astro](https://astro.build/)
 
-![](https://image.maxpreps.io/school-mascot/8/1/8/8189bc71-3da4-4932-afdd-788cd761d6ce.gif?version=636584101800000000&width=1024&height=1024)
 

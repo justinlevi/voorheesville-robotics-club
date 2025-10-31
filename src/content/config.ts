@@ -29,7 +29,23 @@ const projects = defineCollection({
   }),
 });
 
+// Reviews collection schema
+const reviews = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string().max(100),
+    description: z.string().max(200),
+    date: z.coerce.date(),
+    author: z.string(),
+    rating: z.number().min(0).max(10).optional(),
+    tags: z.array(z.string()).optional(),
+    image: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   blog,
   projects,
+  reviews,
 };

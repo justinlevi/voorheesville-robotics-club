@@ -15,12 +15,12 @@ const posts = sortBlogPosts(filterDrafts(allPosts)).slice(0, 3);
 const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0, 2);
 ---
 
-<BaseLayout
+<BaseLayout 
   title="Home"
   description="Welcome to Voorheesville Robotics Club - Building the future, One robot at a time. Explore our projects, tutorials, and competition updates."
 >
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 md:py-32">
+  <section class="bg-gradient-to-b from-yellow-400 to-purple-500 text-white py-20 md:py-32">
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-6xl font-bold mb-6">
         Building the future,<br />One Robot at a Time
@@ -47,7 +47,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
 
   <!-- Featured Projects -->
   {featuredProjects.length > 0 && (
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-200">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between mb-8">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured Projects</h2>
@@ -66,7 +66,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
 
   <!-- Recent Blog Posts -->
   {posts.length > 0 && (
-    <section class="py-16">
+    <section class="bg-gray-200 py-16">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between mb-8">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest from the Blog</h2>
@@ -111,7 +111,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
   </section>
 
   <!-- Features / Stats -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-16 bg-gray-200">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
         Why Join Our Club?
@@ -125,7 +125,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Learn by Doing</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-800">
             Build real robots, write real code, and solve real engineering challenges with hands-on projects.
           </p>
         </div>
@@ -138,7 +138,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Compete Together</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-800">
             Represent our school in regional and national robotics competitions against top teams.
           </p>
         </div>
@@ -151,7 +151,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
             </svg>
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-2">Build Skills</h3>
-          <p class="text-gray-600">
+          <p class="text-gray-800">
             Develop technical skills in programming, CAD design, electronics, and problem-solving.
           </p>
         </div>
@@ -162,7 +162,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
   
 
   <!-- CTA -->
-  <section class="py-16">
+  <section class="bg-gray-200 py-16">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         Ready to Get Started?

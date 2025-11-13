@@ -6,7 +6,9 @@
   /* Enhanced line heights for better readability */
   --line-height-relaxed: 1.75;
   --line-height-loose: 2;
+  --color-mint-500: oklch(0.72 0.11 178);
 }
+
 
 /* Prose customizations for optimal readability */
 .prose {

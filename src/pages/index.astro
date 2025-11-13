@@ -83,6 +83,33 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
     </section>
   )}
 
+  <!-- Product Reviews (moved above Features) -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Product Reviews</h2>
+        <a href="/product-review" class="text-blue-600 hover:text-blue-700 font-medium">View reviews →</a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 items-stretch">
+        <div class="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-2">Motor Controller: ABC-123</h3>
+          <p class="text-gray-600 mb-4">Short preview of an in-depth review covering reliability, power, and value.</p>
+          <a href="/product-review" class="text-blue-600 hover:text-blue-700 font-medium">Read review →</a>
+        </div>
+        <div class="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-2">Sensor Pack: SENS-O</h3>
+          <p class="text-gray-600 mb-4">Quick note on accuracy, build quality, and usability in student projects.</p>
+          <a href="/product-review" class="text-blue-600 hover:text-blue-700 font-medium">Read review →</a>
+        </div>
+        <div class="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-2">Battery: PowerCell 5A</h3>
+          <p class="text-gray-600 mb-4">Preview of runtime tests, safety notes, and recommendations.</p>
+          <a href="/product-review" class="text-blue-600 hover:text-blue-700 font-medium">Read review →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features / Stats -->
   <section class="py-16">
     <div class="container mx-auto px-4">
@@ -132,6 +159,8 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
     </div>
   </section>
 
+  
+
   <!-- CTA -->
   <section class="py-16">
     <div class="container mx-auto px-4 text-center">
@@ -139,7 +168,7 @@ const featuredProjects = getFeaturedProjects(sortProjects(allProjects)).slice(0,
         Ready to Get Started?
       </h2>
       <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        No experience needed! We meet every Monday (Grades 9-12) and Thursday (Grades 6-12) from 2:30-3:30 PM in Room 154.
+        No experience needed! We meet every Monday (Grades 9-12), Wednesday (Grades 9-12) and Thursday (Grades 6-12) from 2:30-3:30 PM in Room 154.
       </p>
       <a
         href="/contact"

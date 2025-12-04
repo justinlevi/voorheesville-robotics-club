@@ -6,7 +6,14 @@
   /* Enhanced line heights for better readability */
   --line-height-relaxed: 1.75;
   --line-height-loose: 2;
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-dark-grey: 
+  --color-purple:
+  --color-gold:
+  --color-light-grey:
+  --color-bold:
 }
+
 
 /* Prose customizations for optimal readability */
 .prose {
@@ -86,19 +93,19 @@
 }
 
 .prose li::marker {
-  color: theme(colors.gray.400);
+  color:gray.400;
   font-weight: 400;
 }
 
 .prose strong {
-  color: theme(colors.gray.900);
+  color: gray.900;
   font-weight: 600;
 }
 
 .prose a {
-  color: theme(colors.blue.600);
+  color: blue.600;
   text-decoration: underline;
-  text-decoration-color: theme(colors.blue.200);
+  text-decoration-color: blue.200;
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
   font-weight: 500;
@@ -106,17 +113,17 @@
 }
 
 .prose a:hover {
-  color: theme(colors.blue.700);
-  text-decoration-color: theme(colors.blue.400);
+  color: blue.700;
+  text-decoration-color:blue.400;
 }
 
 
 .prose blockquote {
   font-weight: 400;
   font-style: italic;
-  color: theme(colors.gray.700);
+  color: gray.700;
   border-left-width: 0.25rem;
-  border-left-color: theme(colors.gray.200);
+  border-left-color: gray.200;
   quotes: "\201C""\201D""\2018""\2019";
   margin-top: 1.6em;
   margin-bottom: 1.6em;

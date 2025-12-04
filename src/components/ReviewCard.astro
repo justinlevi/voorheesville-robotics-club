@@ -29,9 +29,9 @@ const slug = review.id.replace(/\.md$/, '');
   <!-- Content: If it works it works --> >
   <div class="flex-1 p-6 flex flex-col">
     <!-- Tags -->
-    {review.data.tags.length > 0 && (
+    {(review.data.tags ?? []).length > 0 && (
       <div class="flex flex-wrap gap-2 mb-3">
-        {review.data.tags.slice(0, 2).map((tag) => (
+        {(review.data.tags ?? []).slice(0, 2).map((tag) => (
           <span class="inline-block px-2 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded">
             {tag}
           </span>
